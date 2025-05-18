@@ -1,0 +1,176 @@
+<!-- This is my LBBD DRIVE PAGE.  I will demonstrate my knowledge of how to incorporate an image, and table using HTML. -->
+
+<!DOCTYPE html>
+	
+
+
+<!-- Starts the webpage -->
+<html lang="en">
+		
+
+<head>
+<!-- The meta tells the browser what characters to display -->
+<meta charset="UTF-8">
+<!-- The head section contains metadata about the webpage, like the title shown on the browser tab -->
+<title>A Table of LBBD list of Values</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='stackerstyle.css') }}">
+    				
+</head>
+
+
+<body>
+	
+	<header>
+
+		<nav>
+  		<a href="{{ url_for('main.home') }}">Return to Home</a> |
+  		<a href="{{ url_for('main.blogs') }}">Blogs</a> |
+ 	        <a href="{{ url_for('main.projects') }}">Projects</a> |
+  		<a href="{{ url_for('main.resources') }}">GDPR</a> |
+  		<a href="{{ url_for('main.education') }}">Education</a>
+		</nav>
+
+	</header>
+
+	<main>
+				<!-- Insert LBBD logo here -->
+			<img src="{{ url_for('static', filename='images/Barking&Dagenham_logo.png') }}" 
+     			alt="Barking and Dagenham  Logo" 
+     			style="width: 300px; height: auto; display: block; margin: 20px 0;">
+
+
+    			<h1>LBBD DRIVE VALUES</h1>
+    			<!-- h1 is the main heading of the page -->
+
+   	 		<p><em> Deliver, Respond, Inspire, Value and Engage</em></p>
+
+
+			<p> Here is a list of LBBD values.</p>
+    	 		<!-- p stands for paragraph. This is a simple paragraph explaining the site. -->
+
+
+
+
+
+				<!--This shows that I can create a table with HTML. -->
+
+					<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  					<thead>
+    						<tr>
+      							
+							<th style="text-align: center; font-size: 22px; ">VALUE</th>
+    							<th style="text-align: center; font-size: 22px; ">DETAILS</th>
+
+    						</tr>
+  					</thead>
+  	
+
+					<tbody>
+    						<tr>
+      							<td style="text-align: center;" ><b><em>DELIVER</em></b></td>
+						 
+							<td>
+							<br> I get the basics right and keep learning my skills.</br>
+							<br> I work with my teams and others to get things done, and never leave a problem unsolved</br>
+							<br> I am responsible for my actions, make decisions and can explain why I make them</br>
+							</td>
+    						</tr>
+
+
+   					        <tr>
+      							<td style="text-align: center;" ><b><em>RESPOND<em><b></td>
+      							<td>
+							<br> I am professional and polite in every contact I have with residents and customers,</br> 
+							<br> leaving them always with the good impression of the council</br>
+							</td>
+    						</tr>	
+    						
+
+
+						<tr>
+      							<td style="text-align: center;" ><b><em>INSPIRE</em></b></td>
+							<td>
+							<br> I see it as my personal responsiblity to maximise the satisfactions of customers;</br>
+							<br> treating customers fairly, professionally and transparently </br>
+							<br> </br>
+							<br> I take pride in my work , and represent the council in a positive way</br>
+							<br> sending the right message to residents, customers and partners in a way</br>
+							<br> I communicate and behave</br>
+							</td>
+						</tr>
+    
+
+
+						<tr>
+      							<td style="text-align: center;" ><b><em>VALUE</em></b></td>
+							<td>I understand my contribution and the part I play to change the borough for the better.</td>
+    						</tr>
+
+
+
+						<tr>
+      							<td style="text-align: center;" ><b><em>ENGAGE</em></b></td>
+							<td> I speak up constructively and with respect when I think I need things to improve.</td>
+						</tr>
+  
+
+	</tbody>
+</table>
+
+	</main>
+
+<br>
+  	 <footer>
+        	<p>© 2025 Future Full Stack Developer Associate. All rights reserved. 😊</p>
+        	<div style="background-color: #333; color: white; padding: 10px; text-align: center;">
+            		This website uses local storage to enhance your experience. 
+            		<button>Accept</button>
+        	</div>
+    </footer>
+
+		
+			<!-- Cookie banner -->
+			<div id="cookie-banner" style="background: #333; color: #fff; padding: 10px; text-align: center;">
+  			<p>This website uses local storage to enhance your experience. 
+    			<button onclick="acceptCookies()">Accept</button>
+  			</p>
+			</div>
+
+			<script>
+  				function acceptCookies() {
+	   			 localStorage.setItem('cookieConsent', 'true');
+    				document.getElementById('cookie-banner').style.display = 'none';
+  				}
+
+  				window.onload = function() {
+    				if (localStorage.getItem('cookieConsent') === 'true') {
+      				document.getElementById('cookie-banner').style.display = 'none';
+    				}
+  				}
+				</script>
+
+				
+				
+			<!-- code added in order to test the cookie banner on every page-->
+			
+			<script>
+			localStorage.removeItem('cookieConsent');
+			</script>
+			
+
+
+
+	
+		</body>  
+
+
+
+	</html>
+
+
+
+
+
+
+
+
