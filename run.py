@@ -1,4 +1,4 @@
-from routes import main   
+from app.routes import main
 
 from flask import Flask, render_template
 
@@ -11,3 +11,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
