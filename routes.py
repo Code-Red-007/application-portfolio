@@ -57,13 +57,13 @@ def education():
 def projects():
     return render_template('projects.html')
 
-@main.route('/resources')
+@main.route('/Resources')
 def resources():
-    return render_template('resources.html')
+    return render_template('Resources.html')
 
-@main.route('/values')
+@main.route('/Values')
 def values():
-    return render_template('values.html')
+    return render_template('Values.html')
 
 @main.route('/cookies')
 def cookies():
@@ -73,9 +73,9 @@ def cookies():
 def privacy():
     return render_template('privacy.html')
 
-@main.route('/admin')
+@main.route('/admin_login')
 def admin():
-    return render_template('admin.html')
+    return render_template('admin_login.html')
 
 @main.route('/signup', methods=['GET', 'POST'])
 def signup():
