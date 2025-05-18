@@ -5,6 +5,16 @@
     <title>Admin Login</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='stackerstyle.css') }}">
 </head>
+  <header>
+        <nav>
+            <a href="{{ url_for('main.home') }}">Return to Home</a> |
+            <a href="{{ url_for('main.blogs') }}">Blogs</a> |
+            <a href="{{ url_for('main.projects') }}">Projects</a> |
+            <a href="{{ url_for('main.education') }}">Education</a> |
+            <a href="{{ url_for('main.values') }}">LBBD DRIVE</a>
+        </nav>
+    </header>
+
 <body>
 
     <h1>Admin Login</h1>

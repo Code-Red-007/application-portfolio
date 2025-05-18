@@ -73,6 +73,10 @@ def cookies():
 def privacy():
     return render_template('privacy.html')
 
+@main.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 @main.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
