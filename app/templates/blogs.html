@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expandable Blog Full Test</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="{{ url_for('static', filename='stackerstyle.css') }}">  
+<style>
+    /* Just in case style.css isn't loading */
+    .blog-content {
+      display: none;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <a href="{{ url_for('main.home') }}">Return to Home</a> |
+  <a href="{{ url_for('main.projects') }}">Projects</a> |
+  <a href="{{ url_for('main.education') }}">Education</a> |
+  <a href="{{ url_for('main.resources') }}">GDPR</a> |
+  <a href="{{ url_for('main.values') }}">LBBD DRIVE</a>
+</nav>
+
+</header>
+
+<main>
+  <div class="blog-container">
+    <h1>Blog Articles</h1>
+	<p> Expand to read the articles. </p>
+    <div class="blog-post">
+      <h2 class="blog-title">Article 1: The Power of Communication</h2>
+      <div class="blog-content">
+        <p>This article is AI generated.</p>
+	<p>Communication is the foundation of all human relationships, both personal and professional. Without effective communication, even the strongest ideas can be misunderstood, leading to confusion, frustration, and lost opportunities. The power of communication lies not just in conveying information, but in creating connection, understanding, and shared purpose. </p>
+
+<p>Effective communication requires more than simply speaking or sending a message. It involves active listening, empathy, clarity, and timing. Listening is perhaps the most undervalued skill. Truly hearing what someone else is saying — beyond their words, into their tone, emotions, and intentions — can transform a conversation. Active listening demonstrates respect and builds trust, encouraging open and honest exchanges.</p>
+ 
+<p>Empathy plays a critical role as well. When we communicate with empathy, we acknowledge the experiences, emotions, and perspectives of others. This helps us respond thoughtfully rather than reactively, leading to richer and more productive dialogue.</p>
+
+<p>Clarity is another essential element. A clear message reduces the risk of misunderstanding. It helps the receiver absorb and act on the information as intended. Avoiding jargon, speaking directly, and organizing thoughts logically are ways to strengthen clarity.</p>
+
+<p>Timing matters too. Sometimes it’s not just what you say, but when you say it. Delivering a message at the right moment — when the listener is ready and receptive — can make a tremendous difference.</p>
+ 
+<p>In professional environments, communication influences leadership, collaboration, and decision-making. A leader who communicates vision clearly inspires confidence and action. A team that shares ideas and feedback openly fosters innovation and growth. Even conflict, when approached with respectful communication, can strengthen relationships rather than damage them.</p>
+ 
+<p>Digital technology has expanded the ways we communicate, but it has also introduced challenges. Text messages, emails, and social media can strip away tone and context, leading to misunderstandings. That’s why intentionality in communication is more important than ever. Choosing the right medium, clarifying expectations, and being mindful of tone can bridge gaps caused by digital channels.</p>
+
+<p>Ultimately, the power of communication lies in its ability to bridge differences, solve problems, and create meaning between people. Whether you're leading a team, building a friendship, or advocating for a cause, sharpening your communication skills is one of the most valuable investments you can make. It builds trust, fosters loyalty, and drives success across every area of life. In a world where connections are crucial, communication isn’t just a soft skill — it’s a superpower.</p>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="blog-post">
+      <h2 class="blog-title">Article 2: Creativity and Innovation</h2>
+      <div class="blog-content">
+        <p>Creativity is not just for artists. Innovation drives success everywhere.</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="blog-post">
+      <h2 class="blog-title">Article 3: Building Strong Networks</h2>
+      <div class="blog-content">
+        <p>Networking is about genuine human connection.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Future Full Stack Developer Associate. All rights reserved. 😊</p>
+</footer>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" style="background: #333; color: #fff; padding: 10px; text-align: center;">
+  <p>This website uses local storage to enhance your experience. 
+    <button id="accept-cookie-btn">Accept</button>
+  </p>
+</div>
+
+<!-- ONLY ONE SCRIPT -->
+<script>
+window.onload = function() {
+  // Cookie banner logic
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptCookieBtn = document.getElementById('accept-cookie-btn');
+
+  if (localStorage.getItem('cookieConsent') === 'true') {
+    cookieBanner.style.display = 'none';
+  }
+
+  acceptCookieBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'true');
+    cookieBanner.style.display = 'none';
+  });
+
+  // Blog expand logic
+  const blogPosts = document.querySelectorAll('.blog-post');
+  blogPosts.forEach(post => {
+    const title = post.querySelector('.blog-title');
+    const content = post.querySelector('.blog-content');
+
+    title.addEventListener('click', () => {
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+      } else {
+        content.style.display = 'block';
+      }
+    });
+  });
+}
+</script>
+
+</body>
+</html>
+

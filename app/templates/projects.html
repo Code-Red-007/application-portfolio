@@ -1,0 +1,107 @@
+<!-- This is my Projects PAGE. It shows a list of simple projects showcasing my talent.
+It demonstrates AF1/I, AF2/I, and AF3/I of the job requirements, showing knowledge in HTML, CSS, and Python. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Projects</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stackerstyle.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="{{ url_for('main.home') }}">Return to Home</a> |
+            <a href="{{ url_for('main.blogs') }}">Blogs</a> |
+            <a href="{{ url_for('main.education') }}">Education</a> |
+            <a href="{{ url_for('main.resources') }}">GDPR</a> |
+            <a href="{{ url_for('main.values') }}">LBBD DRIVE</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>My Simple Coding Projects</h1>
+        <h2>This page lists and links to my GitHub coding projects to date.</h2>
+
+        <!-- File Handling Projects -->
+        <section id="file">
+            <h2>File Handling</h2>
+            <ul>
+                <li><strong><a href="https://github.com/Code-Red-007/File-Handing/blob/main/find_related_movies.py">Finding Relevant Movies</a></strong> – Parses and matches related movie data.</li>
+               
+        </section>
+
+        <hr>
+
+        <!-- Automation Projects -->
+        <section id="automation">
+            <h2>Automation</h2>
+            <ul>
+                <li><strong><a href="https://github.com/Code-Red-007/Automation/blob/main/award_calculation_script.py.py">Awards</a></strong> – Assigns awards based on participants' final time.</li>
+                <li><strong><a href="https://github.com/Code-Red-007/Automation/blob/main/holiday.py">Total Hotel Costs</a></strong> – Calculates hotel cost based on user input.</li>
+                <li><strong><a href="https://github.com/Code-Red-007/Automation/blob/main/Validate_full_name.py">Validating User's Name</a></strong> – Validates user's full name format.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Algorithms Projects -->
+        <section id="algorithms">
+            <h2>Algorithms</h2>
+            <ul>
+                <li><strong><a href="https://github.com/Code-Red-007/Algorithms/blob/main/Looping.py">Looping</a></strong> – Basic loop operations and logic flow.</li>
+                <li><strong><a href="https://github.com/Code-Red-007/Algorithms/blob/main/minesweep_counter.py">Minesweeper Counter</a></strong> – Algorithm to count adjacent mines in a grid.</li>
+               
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Website Project -->
+        <section id="frontend">
+            <h2>Website Project</h2>
+            <ul>
+                <li><strong>Frontend & Backend</strong> – Showcases this website.</li>
+                         </ul>
+        </section>
+
+        <hr>
+
+            <h2>More Coming Soon!</h2>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Future Full Stack Developer Associate. All rights reserved. 😊</p>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="background: #333; color: #fff; padding: 10px; text-align: center;">
+        <p>This website uses local storage to enhance your experience.
+            <button onclick="acceptCookies()">Accept</button>
+        </p>
+    </div>
+
+    <!-- Cookie Consent Scripts -->
+    <script>
+        // Reset consent (for testing, remove in production)
+        localStorage.removeItem('cookieConsent');
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        window.onload = function () {
+            if (localStorage.getItem('cookieConsent') === 'true') {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        };
+    </script>
+
+</body>
+
+</html>

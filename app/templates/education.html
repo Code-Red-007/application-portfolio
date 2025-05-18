@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Education</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='stackerstyle.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="{{ url_for('main.home') }}">Return to Home</a> |
+            <a href="{{ url_for('main.blogs') }}">Blogs</a> |
+            <a href="{{ url_for('main.projects') }}">Projects</a> |
+            <a href="{{ url_for('main.resources') }}">GDPR</a> |
+            <a href="{{ url_for('main.values') }}">LBBD DRIVE</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h1>Education, Training and Qualifications</h1>
+            <p>This is a timeline of my self-study journey so far:</p>
+            <ul>
+                <li><strong>May 2025 ongoing</strong> – Various courses on Scrimba to refresh basic knowledge, HTML5, CSS, JAVASCRIPT, PYTHON, ACCESSIBILTY,SQLlite</li>
+		<li><strong>March 2023 – September 2023</strong> – Data Scientist Fundamentals Hyperion Bootcamp</li>
+                <li><strong>October 2015 – July 2018</strong> – Attended Teesside University (Comics and Graphic Novels)</li>
+                <li><strong>July 2013</strong> – Edexcel BTEC Level 3 Extended Diploma in Art and Design (Interactive Media)</li>
+                <li><strong>July 2012</strong> – Edexcel BTEC Level 3 Subsidiary Diploma in Art and Design (Interactive Media)</li>
+                <li><strong>July 2011</strong> – Edexcel BTEC Level 2 in Interactive Media</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Knowledge and Experience Section -->
+        <section id="knowledge">
+            <h1>Knowledge, Skills and Experience</h1>
+            <p>I am a fast learner with a strong foundation in HTML, CSS, and web development fundamentals. Throughout my self-taught journey, I have demonstrated the ability to quickly absorb new concepts and adapt to evolving challenges. I approach every project with determination and a problem-solving mindset, and I do not stop until a solution is found. My work reflects my commitment to continuous improvement, attention to detail, and passion for creating accessible, user-friendly web experiences.</p>
+            <p><a href="{{ url_for('main.projects') }}">View my Projects</a></p>
+        </section>
+
+        <hr>
+
+        <!-- Development Commitment -->
+        <section>
+            <h2>Note</h2>
+            <p>I am willing to undertake further professional development in software and related technologies.</p>
+        </section>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Future Full Stack Developer Associate. All rights reserved. 😊</p>
+        </footer>
+
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-banner" style="background: #333; color: #fff; padding: 10px; text-align: center;">
+            <p>This website uses local storage to enhance your experience.
+                <button onclick="acceptCookies()">Accept</button>
+            </p>
+        </div>
+
+        <!-- Cookie Script -->
+        <script>
+            function acceptCookies() {
+                localStorage.setItem('cookieConsent', 'true');
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+
+            window.onload = function () {
+                if (localStorage.getItem('cookieConsent') === 'true') {
+                    document.getElementById('cookie-banner').style.display = 'none';
+                }
+            };
+
+            // Reset consent for testing (remove this in production)
+            localStorage.removeItem('cookieConsent');
+        </script>
+
+    </main>
+
+</body>
+
+</html>

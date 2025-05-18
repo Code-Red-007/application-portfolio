@@ -1,0 +1,126 @@
+<!-- This is my HOME PAGE. I will demonstrate my basic knowledge of HTML by constructing a website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Application Portfolio</title>
+
+    <!-- Linking the stylesheet -->
+    <!-- <link rel="stylesheet" href="stackerstyle.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='stackerstyle.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="{{ url_for('main.home') }}">Return to Home</a> |
+        <a href="{{ url_for('main.blogs') }}">Blogs</a> |
+        <a href="{{ url_for('main.education') }}">Education</a> |
+        <a href="{{ url_for('main.projects') }}">Projects</a> |
+        <a href="{{ url_for('main.resources') }}">GDPR</a> |
+        <a href="{{ url_for('main.values') }}">LBBD DRIVE</a> |
+        <a href="{{ url_for('main.signup') }}">SUBSCRIBE</a>
+    </nav>
+
+    <hr>
+
+    <!-- Weather Section using API -->
+    <section id="weather">
+        <h3><strong>Today's Weather</strong></h3>
+        <p><strong>City:</strong> {{ weather.city }}</p>
+        <p><strong>Temperature:</strong> {{ weather.temperature }}°C</p>
+        <p><strong>Conditions:</strong> {{ weather.description }}</p>
+    </section>
+
+    <hr>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Welcome to My Application Portfolio</h1>
+        <p>A showcase of my technical learning journey, real-world projects, and professional development.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Explore My Sections</h2>
+            <ol>
+                <li><a href="{{ url_for('main.education') }}">Education, Training and Qualifications</a></li>
+                <li><a href="{{ url_for('main.education') }}">Knowledge, Skills and Experience</a></li>
+                <li><a href="{{ url_for('main.blogs') }}">Communication, Contacts and Relationships</a></li>
+                <li><a href="{{ url_for('main.blogs') }}">Creativity and Innovation</a></li>
+                <li><a href="{{ url_for('main.resources') }}">Resources, Work Demands and Decisions</a></li>
+                <li><a href="{{ url_for('main.values') }}">LBBD DRIVE Values: Deliver, Respond, Inspire, Engage</a></li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Explore My Portfolio</h2>
+            <ul>
+                <li><a href="{{ url_for('main.projects') }}">My Projects</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Notices</h3>
+            <ul>
+                <li><a href="{{ url_for('main.privacy') }}">Privacy Notice</a></li>
+                <li><a href="{{ url_for('main.cookies') }}">Cookies Notice</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Quote Section -->
+    <section id="quote">
+        <h4>Quote of the Day</h4>
+        <blockquote>
+            <p><em>"{{ quote.text }}"</em></p>
+        </blockquote>
+        <p><strong>— {{ quote.author }}</strong></p>
+    </section>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Future Full Stack Developer Associate. All rights reserved. 😊</p>
+	<p><a href="{{ url_for('main.view_subscribers') }}">Admin: View Subscribers</a></p>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="background: #333; color: #fff; padding: 10px; text-align: center;">
+        <p>This website uses local storage to enhance your experience.
+            <button onclick="acceptCookies()">Accept</button>
+        </p>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        window.onload = function () {
+            if (localStorage.getItem('cookieConsent') === 'true') {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        };
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
