@@ -1,8 +1,9 @@
+from routes import main   
+
 from flask import Flask, render_template
-from routes.main import main  
 
 app = Flask(__name__)
-app.register_blueprint(main)   
+app.register_blueprint(main)
 
 @app.route('/')
 def index():
