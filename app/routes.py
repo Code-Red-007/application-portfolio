@@ -57,13 +57,13 @@ def education():
 def projects():
     return render_template('projects.html')
 
-@main.route('/Resources')
+@main.route('/resources')
 def resources():
-    return render_template('Resources.html')
+    return render_template('resources.html')
 
-@main.route('/Values')
+@main.route('/values')
 def values():
-    return render_template('Values.html')
+    return render_template('values.html')
 
 @main.route('/cookies')
 def cookies():
